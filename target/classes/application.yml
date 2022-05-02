@@ -1,0 +1,47 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/seckill?serverTimezone=GMT%2B8
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://1.14.94.244:3306/seckill
+    username: root
+    password: root
+    hikari:
+      pool-name: DataHikariCP
+      minimum-idle: 5
+      idle-timeout: 1800000
+      maximum-pool-size: 10
+      max-lifetime: 1800000
+      connection-timeout: 30000
+  redis:
+    host: 1.14.94.244
+    port: 6380
+    database: 0
+    timeout: 30000
+    lettuce:
+      pool:
+        max-active: 10
+        max-wait: 100000
+        max-idle: 8
+        min-idle: 4
+  rabbitmq:
+    host: 1.14.94.244
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        concurrency: 10
+        max-concurrency: 10
+        prefetch: 1
+
+mybatis-plus:
+  mapper-locations: classpath:com/ljn/seckill/mapper/xml/*.xml
+  type-aliases-package: com.ljn.seckill.entity
+
+logging:
+  level:
+    com.ljn.seckill.mapper: debug

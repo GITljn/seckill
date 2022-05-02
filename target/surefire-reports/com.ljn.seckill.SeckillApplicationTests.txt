@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ljn.seckill.SeckillApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.965 s - in com.ljn.seckill.SeckillApplicationTests
